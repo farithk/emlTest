@@ -29,6 +29,7 @@ let name = "";
 
 app.post('/', function(req, res){
   name = req.body;
+  console.log(name);
   res.sendFile(__dirname +"/views/presentation.html");
 });
 
