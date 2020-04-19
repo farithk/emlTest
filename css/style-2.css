@@ -408,6 +408,7 @@ a{
     position: absolute;
     margin-left: 70vw;
     top: 0.5vw;
+    background-color: black;
   }
 
   /* CSS to layout the form */

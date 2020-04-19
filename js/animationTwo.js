@@ -20,6 +20,7 @@ window.addEventListener("load", () => {
   back.style.opacity = 0;
   mainProject.style.opacity = 0;
 
+
   // Variable to save the data name from the API
   let dataName;
 
@@ -45,7 +46,7 @@ window.addEventListener("load", () => {
 
   // Once the Async function get the data we print it to the fringe banner
   requestName().then(() => {
-
+    banner.style.opacity = 1;
     innerGreeting.innerHTML = "Hi " + dataName.Name + ",<br> Welcome to my Portfolio,<br>These are some of my projects";
 
   });
