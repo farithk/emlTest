@@ -6,6 +6,7 @@ const upload = multer();
 const app = express();
 let skillsData = require('./data/skills.json');
 
+
 //Allow cros origin
 app.use(cors());
 
@@ -39,6 +40,6 @@ app.get('/skills', function(req, res){
   res.json(skillsData);
 });
 
-app.listen(3000, () => {
-  console.log("Server Listening on Port 3000");
+app.listen(process.env.PORT || 8080, () => {
+  console.log("Server Listening on Port 8080");
 });
