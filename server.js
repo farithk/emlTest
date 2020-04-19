@@ -10,6 +10,12 @@ let skillsData = require('./data/skills.json');
 //Allow cros origin
 app.use(cors());
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // for parsing application/json
 app.use(bodyParser.json());
 
