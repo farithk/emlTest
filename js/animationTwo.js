@@ -33,13 +33,13 @@ window.addEventListener("load", () => {
   // Async function to fetch the data from the server as a json file
   // Fetching the name data
   const requestName = async () => {
-    const responseName = await fetch("http://serene-stream-71428.herokuapp.com/name");
+    const responseName = await fetch("https://serene-stream-71428.herokuapp.com/name");
     dataName = await responseName.json();
   }
 
   // Fetching the skills data
   const requestSkills = async () => {
-    const responseSkills = await fetch("http://serene-stream-71428.herokuapp.com/skills");
+    const responseSkills = await fetch("https://serene-stream-71428.herokuapp.com/skills");
     skills = await responseSkills.json();
   }
 
