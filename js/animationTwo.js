@@ -33,13 +33,13 @@ window.addEventListener("load", () => {
   // Async function to fetch the data from the server as a json file
   // Fetching the name data
   const requestName = async () => {
-    const responseName = await fetch("http://127.0.0.1:3030/name");
+    const responseName = await fetch("http://0.0.0.0:3030/name");
     dataName = await responseName.json();
   }
 
   // Fetching the skills data
   const requestSkills = async () => {
-    const responseSkills = await fetch("http://127.0.0.1:3030/skills");
+    const responseSkills = await fetch("http://0.0.0.0:3030/skills");
     skills = await responseSkills.json();
   }
 
