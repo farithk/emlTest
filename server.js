@@ -39,11 +39,13 @@ app.post('/', function(req, res){
   res.sendFile(__dirname +"/views/presentation.html");
 });
 
-app.get('/name', function(req, res){
+app.options('name', cors()); // enable pre-flight request for GET request
+app.get('/name', cors(), function(req, res){
   res.json(name);
 });
 
-app.get('/skills', function(req, res){
+app.options('skills', cors());
+app.get('/skills', cors(), function(req, res){
   res.json(skillsData);
 });
 
