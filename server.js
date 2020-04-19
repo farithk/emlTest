@@ -41,6 +41,6 @@ app.get('/skills', function(req, res){
   res.json(skillsData);
 });
 
-app.listen(3030, () => {
+app.listen(process.env.PORT || 3030, () => {
   console.log("Server Listening on Port 8080");
 });
