@@ -115,6 +115,10 @@ a{
 
 }
 
+#options.fadeIn{
+  animation: fadeIn 1.5s ease 0s backwards;
+}
+
 #options{
   font-size: 1.5vw;
   font-family: "Montserrat Bold";
@@ -175,6 +179,10 @@ a{
 #mainProject > #mainProjectTitle{
 
     opacity: 1;
+}
+
+#mainProject.fadeIn{
+  animation: fadeIn 1.5s ease 0s backwards;
 }
 
 #mainProject{

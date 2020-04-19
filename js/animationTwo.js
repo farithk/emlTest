@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
   header.style.opacity = 0;
   back.style.opacity = 0;
   mainProject.style.opacity = 0;
-
+  options.style.opacity = 0;
 
   // Variable to save the data name from the API
   let dataName;
@@ -86,6 +86,8 @@ window.addEventListener("load", () => {
 
       // Starting the top header links animation
       back.setAttribute("class", "fadeIn");
+      mainProject.setAttribute("class", "fadeIn");
+      options.setAttribute("class", "fadeIn");
 
       // Using a for loop to catch the elements and properties from the json data.
       // Once we have the properties we append them to a html format to write on DOM.
@@ -94,8 +96,6 @@ window.addEventListener("load", () => {
 
         htmlOptions = htmlOptions + "<div id='"+ skills.front[prop].title +"' class='optionLink'><div id='line'></div><div class='innerskiil'>"+ skills.front[prop].title +"</div></div>";
       }
-
-
 
     options.innerHTML = htmlOptions;
 
@@ -106,11 +106,16 @@ window.addEventListener("load", () => {
     //mainProject.style.backgroundSize = "20vw 23vw";
     back.style.opacity = 1;
     mainProject.style.opacity = 1;
+    options.style.opacity = 1;
     }
   });
 
+
+  // Listening when the plus icon inside the main project is being clicking
+  // in order to open the new pop up window
   plusIcon.addEventListener('click', function (event) {
 
+    // Set everything to opacity 0 to only show the pop up window
     setTimeout(() => {
       windowPop.style.opacity = 1;
       mainProject.style.opacity = 0;
@@ -130,6 +135,9 @@ window.addEventListener("load", () => {
     return (e.parentElement.querySelector(':hover') === e);
   }
 
+
+  // Listener to know if the pop up window is being clicked or not
+  // this way we know if the clikc was outside to grid the window
   document.addEventListener('mousemove', function checkHover() {
 
     //Assigning variables to windowPop
@@ -145,6 +153,9 @@ window.addEventListener("load", () => {
 
   });
 
+
+  // If we click outside the pop up window the window dissapear
+  // and every thing fade in to normal state
   banner.addEventListener('click', function (event) {
 
     if(windowOut == 1 && plusIconClicked == 1) {
@@ -162,6 +173,8 @@ window.addEventListener("load", () => {
 
   });
 
+  // Listener to know when the close button at top left is being clicked
+  // to close the pop up window adn fade in all the elements
   close.addEventListener('click', function (event) {
 
     if(plusIconClicked == 1) {
@@ -179,6 +192,8 @@ window.addEventListener("load", () => {
   });
 
 
+  // This is to know which of the option links is being clicked
+  // to change the state of the project section
   options.addEventListener('click', function (event) {
     let name = (event.srcElement.firstChild.nodeValue || event.originalTarget.firstChild.nodeValu);
 

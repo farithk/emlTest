@@ -18,6 +18,7 @@ window.addEventListener("load", () => {
   submitButton.style.opacity = 0;
   form.style.opacity = 0;
 
+
   // Start the first iamge background contracting animation
   banner.setAttribute("class","bannerShrink");
 
@@ -35,6 +36,7 @@ window.addEventListener("load", () => {
     }
   });
 
+  // Listener to know when the form is overing its transition
   form.addEventListener("webkitAnimationEnd", (e) => {
 
     if (e.animationName == "formExpanding") {
@@ -94,6 +96,7 @@ async function fadeLetters(phraseName){
  let result = await promise;
 }
 
+// Listener to grid in or out the button when user type inside the input text
 inputName.addEventListener('input', inputHandler);
 
 function inputHandler(){
