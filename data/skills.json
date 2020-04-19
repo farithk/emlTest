@@ -1,0 +1,33 @@
+{
+  "front": {
+     "one": {
+         "title": "PathFinder",
+         "description": "This is a interactive way to show how an AI is used to find the better path for two nodes in any specific situation.",
+         "image": "../images/PathFinder.png"
+     },
+     "two": {
+         "title": "Tic-Tac Toe Game",
+         "description": "A Tic Toc Game that never lose, Try it, if you can.",
+         "image": "../images/Tic-TacToeGame.png"
+     },
+     "three": {
+         "title": "Soup Letter",
+         "description": "A falling soup of letters",
+         "image": "../images/SoupLetter.png"
+     },
+     "four": {
+         "title": "Interactive CV",
+         "description": "An interactive way to show my coding skills",
+         "image": "../images/InteractiveCV.png"
+     }
+
+  },
+
+  "back": {
+    "one": {
+      "title": "Portfolio for EML",
+      "description": "portfolio that uses restful APIs to show data and to interactive with users",
+      "image": "../images/emlCV.png"
+    }
+  }
+}

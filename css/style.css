@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+/**************************************************************/
+/* BANNER SECTION*/
+
+/*Animation class to shrink the banner when starting the page*/
+#banner.bannerShrink{
+  animation: bannerShrink 2s ease 1s backwards;
+}
+
+/*CSS to layout the banner*/
+#banner{
+  background: url(../images/image111111.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+/*Animation class to moving down the form background when finished the banner animation*/
+#form.formExpanding{
+  animation: formExpanding 2s ease 0s backwards;
+}
+
+/* CSS to layout the form */
+#form{
+  font-size: 2vw;
+  font-family: "Montserrat Bold";
+  color: white;
+  height: 23vw;
+  margin-top: 30vh;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* CSS to layout the Title 'I want to know more about you' */
+#title{
+  color: rgba(0, 0, 0, 0);
+  padding-top: 2vh;
+
+}
+
+/* CSS to layout the asking name subtitle */
+#askingName{
+  color: rgba(0, 0, 0, 0);
+}
+
+/*Animation class to moving down the form background when finished the banner animation*/
+#inputName.inputNamefadeIn{
+  animation: inputNamefadeIn 1.5s ease 0s backwards;
+}
+
+/* CSS to layout the input Text */
+#inputName{
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid white;
+  color: white;
+  text-align: center;
+  height: 2vw;
+  width: 15vw;
+  font-size: 2vw;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* CSS to layout the Button */
+#submitButton::-moz-focus-inner { border: 0; }
+#submitButton{
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  margin-top: 3vh;
+  font-size: 2vw;
+  cursor: pointer;
+}
+
+@keyframes inputNamefadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+/*frame to give parameters for the form animation*/
+@keyframes formExpanding {
+  from{
+    opacity: 0;
+  margin-top: 0vh;
+  }
+  to{
+    opacity: 1;
+    margin-top: 30vh;
+  }
+}
+
+/*frame to give parameters for the banner animation*/
+@keyframes bannerShrink {
+  from{
+  background-size: 120vw 120vh;
+  }
+  to{
+  background-size: 100vw 100vh;
+  }
+}
+
+/*ENDING BANNER SECTION*/
+/***************************************************************/
+
+
+
+/**************************************************************/
+/* FONT STYLES*/
+
+@font-face {
+  font-family: 'Ava Meridian';
+  src: url("../fonts/AvaMeridian.otf")format("opentype");
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url("../fonts/Montserrat-Bold.otf")format("opentype");
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url("../fonts/Montserrat-Medium.otf")format("opentype");
+}
+/* ENDING FONT STYLES SECTION /*
+/*************************************************************/
+
+
+/* MOBILE RESPONSIVE*/
+@media only screen and (max-width: 500px) {
+
+  /* CSS to layout the form */
+  #form{
+    font-size: 4vw;
+    font-family: "Montserrat Bold";
+    color: white;
+    height: 50vw;
+    margin-top: 30vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  #submitButton{
+    margin-top: 3vh;
+    font-size: 4vw;
+  }
+
+  #inputName{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid white;
+    color: white;
+    text-align: center;
+    height: 4vw;
+    width: 25vw;
+    font-size: 4vw;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+}
