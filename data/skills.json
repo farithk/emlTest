@@ -2,7 +2,7 @@
   "front": {
      "one": {
          "title": "PathFinder",
-         "description": "This is a interactive way to show how an AI is used to find the better path for two nodes in any specific situation.",
+         "description": "This is an interactive way to show how an AI is used to find the better path for two nodes in any specific situation.",
          "image": "../images/PathFinder.png"
      },
      "two": {
